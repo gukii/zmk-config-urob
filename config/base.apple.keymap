@@ -232,6 +232,13 @@ ZMK_MACRO(win_sleep,
 #define DSK_MGR     &kp LA(GRAVE)            // desktop manager
 #define VOL_DOWN    &hmr RSHFT C_VOL_DN
 
+
+/* for apple */
+#define PRV_APP     &kp LG(LS(TAB))       	// GO to previous app, shift meta-tab
+#define NXT_APP     &kp LG(TAB)      		// GO to next app, meta-tab
+
+
+
 /* Keymap */
 
 ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
@@ -250,7 +257,7 @@ ZMK_LAYER(base,
 
 ZMK_LAYER(nav,
 // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮ ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-     ___           ___           &kp LS(TAB)   &swapper      &kp K_BACK      NAV_PGUP      NAV_BSPC       &kp UP       NAV_DEL       ___
+     ___           ___             PRV_APP       NXT_APP      &kp K_BACK      NAV_PGUP      NAV_BSPC       &kp UP       NAV_DEL       ___
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
      &sk LGUI      &sk LALT      &sk LSHFT     &sk LCTRL     &kp K_FORWARD   NAV_PGDN      NAV_LEFT      &kp DOWN      NAV_RIGHT     &kp RET
 // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
